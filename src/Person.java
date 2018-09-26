@@ -1,5 +1,7 @@
 public class Person {
 
+    public static final String TO_REMOVE = "TO_REMOVE";
+
     private int age;
     private String name;
 
@@ -12,7 +14,19 @@ public class Person {
         return age;
     }
 
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public boolean isMarkedForRemoval() {
+        return name.equals(TO_REMOVE);
     }
 }
