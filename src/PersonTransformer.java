@@ -1,3 +1,4 @@
+import java.util.Comparator;
 import java.util.List;
 
 public class PersonTransformer {
@@ -16,8 +17,12 @@ public class PersonTransformer {
         }
 
         removePersons(personList);
-
+        sortPersons(personList);
         return personList;
+    }
+
+    private void sortPersons(List<Person> personList) {
+        personList.sort(Comparator.comparing(Person::getName));
     }
 
     private void removePersons(List<Person> personList) {
